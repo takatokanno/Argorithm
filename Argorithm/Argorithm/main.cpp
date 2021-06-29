@@ -1,8 +1,12 @@
 ﻿#include "sample.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 int main()
 {
-	setupArraySample00();
+	
+
+
 
 	return 0;
 }

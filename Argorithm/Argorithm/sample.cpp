@@ -1,7 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "sample.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 #define N 5
 
 void setupArraySample00()
@@ -39,4 +39,26 @@ int maxof(const int a[], int n)
 			max = a[i];
 
 	return max;
+}
+
+void dynamicMemoryAllocation()
+{
+
+	int* x;// int型のポインタ
+	// ポインタとは？
+	// アドレスの値を記憶することができる変数
+	int a;
+	x = &a;
+
+	x = (int*)calloc(1, sizeof(int));	// int型のオブジェクトを生成
+
+	if (x == NULL)
+		puts("記憶域の確保に失敗しました");
+	else {
+		*x = 10;
+		printf("*x =  %d\n", *x);
+		printf("x =  %d\n", x);
+		free(x);						// int型のオブジェクトを破棄
+	}
+
 }
